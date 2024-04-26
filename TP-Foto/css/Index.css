@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    height: 10vh;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: right;
+}
+
+header a {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    color: rgb(179, 165, 165);
+    text-decoration: none;
+    position: relative;
+}
+
+header a:hover {
+    color: white;
+}
+
+header a::before,
+header a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    background: white;
+    transition: all 0.3s ease-in-out;
+}
+
+header a::before {
+    left: calc(50% + 1px);
+}
+
+header a::after {
+    right: calc(50% + 1px);
+}
+
+header a:hover::before {
+    width: 50%;
+    left: 0;
+}
+
+header a:hover::after {
+    width: 50%;
+    right: 0;
+}
+
+nav {
+    float: right;
+  }
+  
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    float: right;
+}
+nav ul li {
+    display: inline;
+    margin-right: 5px;
+}
+
+#carrusel {
+   height :80vh; 
+   position :relative; 
+}
+
+#carrusel img {
+   width :100%; 
+   height :100%; 
+   object-fit :cover; 
+   display :none; 
+}
+
+#carrusel img.visible {
+   display :block; 
+}
+
+#carrusel button {
+   position:absolute; 
+   top :50%; 
+   transform :translateY(-50%); 
+   background-color :rgba(255,255,255,0.5); 
+   border :none; 
+   font-size :2em; 
+   padding :10px; 
+}
+
+#carrusel #anterior {
+   left :10px; 
+}
+
+#carrusel #siguiente {
+   right :10px; 
+}
+
+#carrusel #indicadores {
+   position:absolute; 
+   bottom :10px; 
+   width :100%; 
+   text-align :center; 
+}
+
+#carrusel #indicadores span {
+   display:inline-block; 
+   width :10px; 
+   height :10px; 
+   border-radius :50%; 
+   background-color :rgba(255,255,255,0.5); 
+   margin :0 5px; 
+}
+
+#carrusel #indicadores span.activo {
+   background-color:white; 
+}
+
+
+footer {
+   height :10vh; 
+   background-color :#f2f2f2; 
+   padding :10px; 
+   text-align:center; 
+}
+
+footer {
+    height :10vh; 
+    background-color :#f7f8fc; 
+    padding :10px; 
+    text-align:center; 
+ }
+ 
+ footer a i {
+     font-size: 26px; /* tamaño del icono */
+     color: black; /* color del icono */
+     vertical-align: middle;
+ }
+ .social-media a {
+     font-size: 18px; /* tamaño de la fuente del texto */
+     color: black; 
+     font-family: 'Nunito', sans-serif; 
+ }
+ 
+ .social-media a i {
+     transition: color 0.3s ease; 
+ }
+ 
+ .social-media a:hover i {
+     color: #ff0000; 
+ }
+ 
+ .email {
+     display: inline-block; 
+     padding: 5px; 
+     border-radius: 60px; 
+     transition: all 0.3s ease; 
+ }
+ 
+ .email:hover {
+     background-color: #333; 
+     color: #fff; 
+ }
+
+
+
+
+
+
+
+/* Reglas de estilo para el logo y el texto en el encabezado */
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo img {
+    height: 50px;
+    width: auto;
+    transition: all 0.3s ease; 
+}
+
+.logo span {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: auto;
+    transition: all 0.3s ease; 
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 5px;
+    transition: all 0.3s ease; 
+}
+
+@media (max-width: 600px) {
+    .logo img {
+        height: 30px; 
+    }
+
+    .logo span {
+        font-size: 20px; 
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 5px; /
+    }
+
+    @media (max-width: 400px) {
+        .logo img {
+            height: 20px; 
+        }
+
+        .logo span {
+            font-size: 10px; 
+        }
+        header a {
+            font-size: 10px;
+        }
+    }
+}
+
+
